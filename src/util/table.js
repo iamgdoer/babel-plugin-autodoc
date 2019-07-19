@@ -18,7 +18,8 @@ module.exports = {
     },
 
     createPropsTable () {
-        let tableStr = title.initTitle('属性列表:h1') + '属性名 | 说明 | 类型 | 默认值 \n --- | --- | --- | --- \n';
+        if (!table.length) return '';
+        let tableStr = title.initTitle('属性列表:h2') + '属性名 | 说明 | 类型 | 默认值 \n --- | --- | --- | --- \n';
         table.forEach(t => {
             tableStr += `${t.name} | ${t.desc} | ${t.type} | ${t.value} \n`;
         });

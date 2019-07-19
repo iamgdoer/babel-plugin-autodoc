@@ -28,7 +28,8 @@ module.exports = {
     },
 
     getAllMethodTable () {
-        let tableStr = title.initTitle('方法列表:h1') + '方法名 | 说明 \n --- | --- \n';
+        if (!methodTableList.length) return '';
+        let tableStr = title.initTitle('方法列表:h2') + '方法名 | 说明 \n --- | --- \n';
         methodTableList.forEach(t => {
             tableStr += `${t.name} | ${t.desc} \n`;
         });
@@ -37,10 +38,11 @@ module.exports = {
     },
 
     getMethodParamsTable () {
+        if (!methodTable.length) return '';
         const tableTitle = '参数名 | 说明 | 类型 \n --- | --- | --- \n';
         let content = '';
         methodTable.forEach(table => {
-            content += '\n' + title.initTitle(`${table.methodName}参数说明:h3`);
+            content += '\n' + title.initTitle(`${table.methodName}参数说明:h4`);
             content += tableTitle;
             table.data.forEach(d => {
                 content += `${d.name} | ${d.desc} | ${d.type} \n`;
