@@ -58,7 +58,7 @@ module.exports = function ({ types: t }) {
                 mdStr += file.contentStr + '\n';
             });
 
-            fs.writeFile('README.md', mdStr, 'utf8', (err) => {
+            fs.writeFile('doc.md', mdStr, 'utf8', (err) => {
                 if (err) {
                     console.log(err);
                     return;

@@ -75,7 +75,7 @@ function getMethodsParams (node) {
 
 // 判断方法是否是要暴露给用户使用
 function isExport (comments) {
-    const reg = /^export/;
+    const reg = /^export|@mogudoc/;
     return reg.test(comments);
 }
 
