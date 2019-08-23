@@ -4,6 +4,7 @@ module.exports = {
     initPropsTableData (node) {
         const name = node.key.name;
         const properties = node.value.properties;
+        if (!properties) return;
         properties.forEach(prop => {
             let idx = table.findIndex(i => i.name === prop.key.name);
             if (name === 'propTypes') {

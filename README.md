@@ -33,3 +33,8 @@ bug修复
 ### 1.1.3
 
     - 防止用户修改README.md后重新编译文件会复写READEME.md，输出路径改为doc.md
+
+
+### 1.1.4
+
+    - bug fixed
